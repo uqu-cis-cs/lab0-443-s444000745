@@ -4,6 +4,8 @@ package edu.uqu.cs;
  * CS 1312
  */
 
+import java.util.Scanner;
+
 /*
 * Make sure to complete and submit your lab
 */
@@ -42,17 +44,97 @@ public class App{
 * Output: 2255464228626
 *
 */
- 
+public static void twisters(){
+      for(int i=1;i<=20; i++)
+    { if(i%2==0 || i%4==0 ||i%6==0)
+    {
+        if(i%2==0)
+       {
+        System.out.print("Tweetle");
+       }
+      if(i%4==0)
+       {
+        System.out.print("Beetle");
+       }
+     if(i%6==0)
+     {
+        System.out.print("Poodle");
+
+     }  else
+     {
+        System.out.print(i);
+     }
+     if(i%11==0){
+      System.out.println(" ");  
+     }
+    }
+    }
+
+}
+ public static void phoneKeypad(String str)
+ {String output="";
+   for(int i=0; i<str.length(); i++)
+   {
+      char c=str.toUpperCase().charAt(i);
+      switch(c)
+      {
+         case 'A':
+         case 'B':
+         case 'C':
+         output+='2';
+         break;
+         case 'D':
+         case 'E':
+         case 'F':
+         output+='3';
+         break;
+         case 'G':
+         case 'H':
+         case 'I':
+         output+='4';
+         break;
+         case 'J':
+         case 'K':
+         case 'L':
+         output+='5';
+         break;
+         case 'M':
+         case 'N':
+         case 'O':
+         output+='6';
+         break;
+         case 'P':
+         case 'Q':
+         case 'R':
+         case 'S':
+         output+='7';
+         break;
+         case 'T':
+         case 'U':
+         case 'V':
+         output+='8';
+         break;
+         case 'W':
+         case 'X':
+         case 'Y':
+         case 'Z':
+         output+='9';
+         break;
+      }
+   }
+   System.out.print(output);
+ }
     public static void main(String [] args) {
         
 
         /* Write your code here */
-     
        //call method twisters()
-       //prompt user to enter a string 
+       twisters();
+       //prompt user to enter a string
+       Scanner scrn =new Scanner(System.in);
        //call method phoneKeypad(string)
-
-
+       String str= scrn.nextLine();
+       phoneKeypad(str);
     }
 
 }
